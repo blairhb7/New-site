@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import 'animate.css'
 import { ArrowUpIcon, MapPinIcon, MapIcon } from '@heroicons/react/24/solid'
 
 
@@ -10,8 +9,8 @@ const Banner = () => {
 
   return (
     <section className="h-screen w-screen xl:flex ">
-      <div className="">
-        <video src="/video.mp4" className='LandingVid ' autoPlay loop muted></video>
+      <div className="realtive">
+        <video src="/video.mp4" className='LandingVid absolute' autoPlay loop muted></video>
       </div>
       <div className=" font-bold xl:flex flex  w-screen h-screen ">
         <div className="flex flex-col justify-center overflow-hidden xl:justify-end pb-32">
