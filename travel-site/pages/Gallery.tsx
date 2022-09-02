@@ -59,7 +59,7 @@ const [expand, setExpand] = useState(false)
                     
               </div>  
             </div> 
-          <div className=" xl:col-span-2 ">
+          <div className=" xl:col-span-2 h-screen ">
             <HorizontalScroll   className={`slider scroll-smooth overflow-y-scroll overflow-x-scroll flex flex-col h-screen scrollbar-hide w-full scroll `} > 
                   <div data-aos="fade-up"  data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" md:grid-col-2 animate-in slide-in-from-bottom duration-1000  flex flex-row w-[5000px]  ">
                     {posts.map((post) => (

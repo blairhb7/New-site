@@ -18,9 +18,9 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className='absolute w-screen p-5 text-7xl flex'> 
+    <div className='absolute w-screen p-5 text-4xl flex'> 
         <div className="flex relative p-5">
-          <MapIcon className='w-8 h-8 mt-2 text-yellow-500 z-50' />
+          <MapIcon className='w-8 h-8 mt-2 py-5 px-3 text-yellow-500 z-50' />
           <a href="/" className="z-50"><h1 className="text-yellow-500 text-4xl font-bold uppercase z-50">Travel</h1></a>
         </div>
         <div className={` flex duration-1000 w-[700px]  items-center`} onClick={ () => setNav(!nav)}> 
@@ -28,7 +28,7 @@ useEffect(() => {
              
           </div>
           <div>
-             <nav className=''>
+             <nav className='xl:text-7xl'>
               <ul className={`${nav ? ['menu '].join('') : ''} hidden`}>
                 <li className='xl:text-7xl text-2xl animate-in slide-in-from-left font-bold uppercase hover:text-yellow-500 duration-500'><a href="/">Home</a></li>
                 <li  className='xl:text-7xl text-2xl animate-in slide-in-from-right font-bold uppercase hover:text-yellow-500 duration-500'><a href="/Gallery">Gallery</a></li>
