@@ -49,7 +49,7 @@ const [expand, setExpand] = useState(false)
                       <ArrowRightIcon className='h-6 w-9'/>
                   </div>
                   <hr className="border flex border-yellow-500 mx-10 w-[85%] " />
-                  <p className="overflow-hidden  xl:text-xl lg:text-md inline-flex font-normal justify-center  break-normal p-10 items-center">
+                  <p className="overflow-hidden lg:text-sm xl:text-md lg:text-md inline-flex font-normal justify-center  break-normal p-10 items-center">
                       We believe that traveling around the world shouldn’t be hard: it’s actually something everyone should be able to do at least once in their lives. Whether you choose to spend a few years or just a couple months traveling this beautiful planet, it’s important to see what’s out there.
                       You might feel like you’re stuck in a rut in your daily life. 
                   Or you’re yearning for something exciting and different.<br/><br/> You’re craving new experiences and new challenges.
@@ -60,7 +60,7 @@ const [expand, setExpand] = useState(false)
               </div>  
             </div> 
           <div className=" xl:col-span-2 h-screen ">
-            <HorizontalScroll   className='slider scroll-smooth overflow-y-scroll overflow-x-scroll flex flex-col h-screen scrollbar-hide w-full scroll' > 
+            <HorizontalScroll   className='slider scroll-smooth  overflow-x-scroll flex flex-col h-screen scrollbar-hide w-full scroll whitespace-nowrap' > 
                   <div data-aos="fade-up"  data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className="card md:grid-col-2 animate-in slide-in-from-bottom duration-1000  flex flex-row w-[5000px]  ">
                     {posts.map((post) => (
                       <Link key={post.id} className='' href={`/post/${post.slug.current}`}> 

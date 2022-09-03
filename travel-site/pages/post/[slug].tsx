@@ -18,9 +18,9 @@ const Post = ({ post}: Props) => {
             <img src={urlFor(post.mainImage).url()!} alt="" className="h-screen w-screen object-cover " />
             <article className="flex flex-col">
                 <h1 className=" flex justify-center font-bold uppercase p-10 text-yellow-500 text-7xl">{post.title}</h1>
-                <hr className="border mx-20 border-black my-8 flex justify-center items-center" />
+                <hr className="border mx-20 border-black my-3 flex justify-center items-center" />
                 <PortableText
-              className=" xl:text-xl flex flex-col space-y-4 justify-center px-8 xl:px-20 py-3 leading-8 break-before-auto"
+              className=" xl:text-md flex flex-col space-y-4 justify-center px-8 xl:px-20 py-3 leading-8 break-before-auto"
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
               content={post.body}
@@ -28,7 +28,7 @@ const Post = ({ post}: Props) => {
                 
               }}
             />
-            <div className="bg-black h-40 xl:h-full cursor-pointer text-white flex justify-center text-xl xl:text-6xl duration-500 mt-4 font-bold items-center hover:bg-yellow-500"><a href="/Gallery">Explore More Locations!</a></div>
+            <div className="bg-black h-40 xl:h-full cursor-pointer text-white flex justify-center text-xl xl:text-4xl duration-500 mt-4 font-bold items-center hover:bg-yellow-500"><a href="/Gallery">Explore More Locations!</a></div>
             </article>
             
         </div>
