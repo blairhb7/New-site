@@ -41,7 +41,7 @@ const [expand, setExpand] = useState(false)
         <div className="grid xl:grid-cols-3 grid-col-1">
           <Nav />
               <div className="flex flex-col xl:h-screen w-screen xl:w-full "> 
-              <div className="bg-black h-40 w-full"></div>
+              <div className="bg-black h-[15%] w-full"></div>
               <div data-aos="slide-right"   data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" flex flex-col pt-10 xl:pt-[200px] break-normal "> 
                   <h1   className=" xl:text-6xl lg:text-4xl uppercase pt-4 px-10 font-extrabold  animate-in text-3xl slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500 break-normal">Popular Destinations</h1>
                   <div className="flex">
