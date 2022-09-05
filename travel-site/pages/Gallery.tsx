@@ -38,18 +38,18 @@ const [expand, setExpand] = useState(false)
 
   return (
     <div className='w-screen '> 
-        <div className="grid xl:grid-cols-3 grid-col-1">
-          <Nav />
-              <div className="flex flex-col xl:h-screen w-screen xl:w-full "> 
-              <div className="bg-black h-[15%] w-full"></div>
-              <div data-aos="slide-right"   data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" flex flex-col pt-10 xl:pt-[200px] break-normal "> 
-                  <h1   className=" xl:text-6xl lg:text-4xl uppercase pt-4 px-10 font-extrabold  animate-in text-3xl slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500 break-normal">Popular Destinations</h1>
+        <div className="grid xl:grid-cols-3 2xl:grid-cols-1 grid-col-1 h-screen">
+          
+              <div className="flex flex-col xl:h-screen 2xl:h-full 2xl:mb-20 w-screen xl:w-full "> 
+              <div className="bg-black h-[120px] w-full"><Nav/></div>
+              <div data-aos="slide-right"   data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" flex flex-col   break-normal "> 
+                  <h1   className=" 2xl:text-4xl xl:text-2xl uppercase pt-4 px-10 font-extrabold  animate-in  slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500 break-normal">Popular Destinations</h1>
                   <div className="flex">
                       <h2 className="uppercase px-10 font-medium ">Scroll Right For More</h2>
                       <ArrowRightIcon className='h-6 w-9'/>
                   </div>
                   <hr className="border flex border-yellow-500 mx-10 w-[85%] " />
-                  <p className="overflow-hidden lg:text-sm xl:text-md lg:text-md inline-flex font-normal justify-center  break-normal p-10 items-center">
+                  <p className="overflow-hidden lg:text-sm xl:text-sm 2xl:text-lg inline-flex font-normal justify-center  break-normal p-10 items-center">
                       We believe that traveling around the world shouldn’t be hard: it’s actually something everyone should be able to do at least once in their lives. Whether you choose to spend a few years or just a couple months traveling this beautiful planet, it’s important to see what’s out there.
                       You might feel like you’re stuck in a rut in your daily life. 
                   Or you’re yearning for something exciting and different.<br/><br/> You’re craving new experiences and new challenges.
@@ -59,19 +59,17 @@ const [expand, setExpand] = useState(false)
                     
               </div>  
             </div> 
-          <div className=" xl:col-span-2 h-screen ">
-            <HorizontalScroll   className='slider scroll-smooth  overflow-x-scroll flex flex-col h-screen scrollbar-hide w-full scroll whitespace-nowrap' > 
-                  <div data-aos="fade-up"  data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className="card md:grid-col-2 animate-in slide-in-from-bottom duration-1000  flex flex-row w-[5000px]  ">
-                    {posts.map((post) => (
-                      <Link key={post.id} className='' href={`/post/${post.slug.current}`}> 
-                        <div className= {` h-screen relative transition-transform  overflow-hidden`} >
-                            <h1 data-aos="slide-right"   data-aos-delay="50" data-aos-duration="2000" data-aos-easing="ease-in-out" className='absolute text-white opacity-100 z-50 p-8 text-5xl font-bold xl:top-[1100px]'>{post.title}</h1>
-                          <img className={`w-[600px] duration-3000 h-full  ease opacity-80 hover:opacity-100  object-cover transition-transform  active ease-in cursor-pointer`} src={urlFor(post.mainImage).url()!} alt="" onMouseLeave={() => setExpand(!true)} />
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-             </HorizontalScroll>
+          <div   className=" scrollbar-hide scroll xl:overflow-y-scroll 2xl:  col-span-2 2xl:col-span-1">
+            <div className='animate-in slide-in-from-right-96 duration-1000  grid xl:grid-cols-2 2xl:grid-cols-10 2xl:h-full  scroll scrollbar-hide  object-cover' > 
+                      {posts.map((post) => (
+                        <Link key={post.id} className='hover:text-yellow-500' href={`/post/${post.slug.current}`}> 
+                          <div className= {` w-screen relative h-max  `} >
+                              <h1  className='absolute visible animate-in slide-in-from-left duration-3000 text-white outline outline-yellow-500 opacity-100 z-50 p-1 m-8 text-2xl xl:text-3xl font-bold 2xl:top-[650px]'>{post.title}</h1>
+                            <img  className={` 2xl:w-[390px] h-[400px] w-full xl:h-[500px] 2xl:h-[800px] xl:max-w-xl  ease  overflow-hidden  hover:opacity-100 z-20 object-cover  transition-transform  active ease-in cursor-pointer`} src={urlFor(post.mainImage).url()!} alt="" onMouseLeave={() => setExpand(!true)} />
+                          </div>
+                        </Link>
+                      ))}
+             </div>
           </div>
         </div>
     </div>
@@ -107,3 +105,6 @@ export const getServerSideProps = async () => {
 
 
 export default Gallery
+
+
+/*     */

@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 .slider {
-    display: flex;
-    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .card {

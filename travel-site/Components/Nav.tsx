@@ -18,8 +18,8 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className='absolute w-screen p-5 nav text-4xl flex'> 
-        <div className="flex relative p-5">
+    <div className='absolute w-screen nav text-4xl flex'> 
+        <div className="flex relative ">
           <MapIcon className='w-8 h-8 mt-2  mx-3 icon text-yellow-500 z-50' />
           <a href="/" className="z-50"><h1 className="text-yellow-500 text-4xl font-bold uppercase z-50">Travel</h1></a>
         </div>
