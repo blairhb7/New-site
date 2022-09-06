@@ -42,7 +42,7 @@ const [expand, setExpand] = useState(false)
           
               <div className="flex flex-col xl:h-screen 2xl:h-full 2xl:mb-20 w-screen xl:w-full "> 
               <div className="bg-black h-[120px] w-full"><Nav/></div>
-              <div data-aos="slide-right"   data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" className=" flex flex-col   break-normal "> 
+              <div data-aos="fade-in"   data-aos-delay="50" data-aos-duration="2000" data-aos-easing="ease-in-out" className=" flex flex-col   break-normal "> 
                   <h1   className=" 2xl:text-4xl xl:text-2xl uppercase pt-4 px-10 font-extrabold  animate-in  slide-in-from-left  flex flex-col hover:text-yellow-500 duration-500 break-normal">Popular Destinations</h1>
                   <div className="flex">
                       <h2 className="uppercase px-10 font-medium ">Scroll Right For More</h2>
@@ -60,11 +60,11 @@ const [expand, setExpand] = useState(false)
               </div>  
             </div> 
           <div   className=" scrollbar-hide scroll xl:overflow-y-scroll 2xl:  col-span-2 2xl:col-span-1">
-            <div className='animate-in slide-in-from-right-96 duration-1000  grid xl:grid-cols-2 2xl:grid-cols-10 2xl:h-full  scroll scrollbar-hide  object-cover' > 
+            <div className='animate-in fade-in duration-3000  grid xl:grid-cols-2 2xl:grid-cols-10 2xl:h-full  scroll scrollbar-hide  object-cover' > 
                       {posts.map((post) => (
                         <Link key={post.id} className='hover:text-yellow-500' href={`/post/${post.slug.current}`}> 
                           <div className= {` w-screen relative h-max  `} >
-                              <h1  className='absolute visible animate-in slide-in-from-left duration-3000 text-white outline outline-yellow-500 opacity-100  p-1 m-8 text-2xl xl:text-3xl font-bold 2xl:top-[550px]'>{post.title}</h1>
+                              <h1  className='absolute visible animate-in slide-in-from-top duration-3000 text-white outline outline-yellow-500 opacity-100  p-1 m-8 text-2xl xl:text-3xl font-bold 2xl:top-[550px]'>{post.title}</h1>
                             <img  className={` 2xl:w-[350px] h-[400px] w-full xl:h-[500px] 2xl:h-[670px] xl:max-w-xl  ease  overflow-hidden  hover:opacity-100 z-20 object-cover  transition-transform  active ease-in cursor-pointer`} src={urlFor(post.mainImage).url()!} alt="" onMouseLeave={() => setExpand(!true)} />
                           </div>
                         </Link>
