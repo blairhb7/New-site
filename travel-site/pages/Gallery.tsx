@@ -60,7 +60,7 @@ const [expand, setExpand] = useState(false)
               </div>  
             </div> 
           <div   className=" scrollbar-hide scroll xl:overflow-y-scroll 2xl:  col-span-2 2xl:col-span-1">
-            <div className='animate-in fade-in duration-3000  grid xl:grid-cols-2 2xl:grid-cols-10 2xl:h-full  scroll scrollbar-hide  object-cover' > 
+            <div className='animate-in fade-in duration-1000  grid xl:grid-cols-2 2xl:grid-cols-10 2xl:h-full  scroll scrollbar-hide  object-cover' > 
                       {posts.map((post) => (
                         <Link key={post.id} className='hover:text-yellow-500' href={`/post/${post.slug.current}`}> 
                           <div className= {` w-screen relative h-max  `} >
