@@ -49,7 +49,7 @@ const [expand, setExpand] = useState(false)
                       <ArrowRightIcon className='h-6 w-9'/>
                   </div>
                   <hr className="border flex border-yellow-500 mx-10 w-[85%] " />
-                  <p className="overflow-hidden lg:text-sm xl:text-sm 2xl:text-lg inline-flex font-normal justify-center  break-normal p-10 items-center">
+                  <p className="overflow-hidden 2xl:max-w-[1900px] lg:text-sm xl:text-sm 2xl:text-lg inline-flex font-normal justify-center  break-normal p-10 items-center">
                       We believe that traveling around the world shouldn’t be hard: it’s actually something everyone should be able to do at least once in their lives. Whether you choose to spend a few years or just a couple months traveling this beautiful planet, it’s important to see what’s out there.
                       You might feel like you’re stuck in a rut in your daily life. 
                   Or you’re yearning for something exciting and different.<br/><br/> You’re craving new experiences and new challenges.
@@ -64,8 +64,8 @@ const [expand, setExpand] = useState(false)
                       {posts.map((post) => (
                         <Link key={post.id} className='hover:text-yellow-500' href={`/post/${post.slug.current}`}> 
                           <div className= {` w-screen relative h-max  `} >
-                              <h1  className='absolute visible animate-in slide-in-from-left duration-3000 text-white outline outline-yellow-500 opacity-100 z-50 p-1 m-8 text-2xl xl:text-3xl font-bold 2xl:top-[650px]'>{post.title}</h1>
-                            <img  className={` 2xl:w-[390px] h-[400px] w-full xl:h-[500px] 2xl:h-[800px] xl:max-w-xl  ease  overflow-hidden  hover:opacity-100 z-20 object-cover  transition-transform  active ease-in cursor-pointer`} src={urlFor(post.mainImage).url()!} alt="" onMouseLeave={() => setExpand(!true)} />
+                              <h1  className='absolute visible animate-in slide-in-from-left duration-3000 text-white outline outline-yellow-500 opacity-100  p-1 m-8 text-2xl xl:text-3xl font-bold 2xl:top-[550px]'>{post.title}</h1>
+                            <img  className={` 2xl:w-[350px] h-[400px] w-full xl:h-[500px] 2xl:h-[670px] xl:max-w-xl  ease  overflow-hidden  hover:opacity-100 z-20 object-cover  transition-transform  active ease-in cursor-pointer`} src={urlFor(post.mainImage).url()!} alt="" onMouseLeave={() => setExpand(!true)} />
                           </div>
                         </Link>
                       ))}
